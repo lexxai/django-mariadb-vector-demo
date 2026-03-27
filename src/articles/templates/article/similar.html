@@ -1,0 +1,26 @@
+{% extends "article/base.html" %}
+
+{% block title %}Similar Articles to #{{ reference.id }}{% endblock %}
+
+{% block content %}
+    <h1>Similar Articles</h1>
+    <p>Finding articles similar to:</p>
+    <div class="article-card" style="border-left: 5px solid #007bff;">
+        <h2>{{ reference.context|truncatewords:20 }}</h2>
+        <div class="meta">ID: {{ reference.id }}</div>
+    </div>
+
+    <h2>Top Matches</h2>
+    {% for article in results %}
+        <div class="article-card">
+            <h2>{{ article.context|truncatewords:20 }}</h2>
+            <div class="meta">
+                ID: {{ article.id }} | 
+                Distance: <span class="distance">{{ article.distance|floatformat:4 }}</span>
+            </div>
+            <p><a href="{% url 'similar_articles' article.id %}">Find similar to this</a></p>
+        </div>
+    {% empty %}
+        <p>No similar articles found.</p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,47 @@
+name: django-mariadb-vector-demo
+services:
+  backend:
+    restart: unless-stopped
+    build:
+      context: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "${APP_PORT:-8001}:${APP_PORT:-8001}"
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - lan
+
+  db:
+    restart: unless-stopped
+    image: mariadb:latest
+    env_file:
+      - .env
+    volumes:
+      - db_data:/var/lib/mysql
+#    expose:
+#      - "3306"
+    ports:
+      - "3306:3306"
+    networks:
+      - lan
+    healthcheck:
+      test: [
+        "CMD-SHELL",
+        "/usr/bin/mariadb -h localhost -u root -p$${MYSQL_ROOT_PASSWORD} -e 'SELECT 1' || exit 1"
+      ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
+volumes:
+  db_data:
+
+networks:
+  lan:
+    driver: bridge

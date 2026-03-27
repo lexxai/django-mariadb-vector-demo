@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django MariaDB Vector Demo{% endblock %}</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .article-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+        .article-card h2 { margin-top: 0; }
+        .meta { color: #666; font-size: 0.9em; }
+        .distance { font-weight: bold; color: #007bff; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'article_list' %}">Home</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

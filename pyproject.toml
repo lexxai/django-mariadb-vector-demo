@@ -1,0 +1,35 @@
+[project]
+name = "django-mariadb-vector-demo"
+version = "0.1.0"
+description = "Demo project for module 'django-mariadb-vector'"
+license = { text = "MIT" }
+license-files = ["LICEN[CS]E*"]
+keywords = ["django", "vector", "mariadb", "vector-search", "djang-orm", "vector-database"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.0.3",
+    "django-mariadb-vector>=0.1.2",
+    "mysqlclient>=2.2.8",
+    "python-dotenv>=1.2.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/lexxai/django-mariadb-vector-demo"
+Issues = "https://github.com/lexxai/django-mariadb-vector/issues"
+Repository = "https://github.com/lexxai/django-mariadb-vector.git"
+
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.flake8]
+max-line-length = 120
+
