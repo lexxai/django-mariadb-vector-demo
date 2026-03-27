@@ -168,3 +168,8 @@ To run the project locally without Docker:
 ## Examples
 
 - [README.md](docs/README.md)
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
