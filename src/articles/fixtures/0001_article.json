@@ -1,0 +1,26 @@
+[
+{
+  "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "context": "Article1",
+    "embedding": "[0.1, 0.2, 0.3, 0.4, 0.5]"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 2,
+  "fields": {
+    "context": "Article2",
+    "embedding": "[0.2, 0.2, 0.3, 0.4, 0.5]"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 3,
+  "fields": {
+    "context": "Article3",
+    "embedding": "[0.3, 0.2, 0.3, 0.4, 0.5]"
+  }
+}
+]
