@@ -1,4 +1,5 @@
 .*
 .idea/
-uv.lock
 /dist/
+*.pyc
+**/__pycache__/
