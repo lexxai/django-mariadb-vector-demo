@@ -137,7 +137,7 @@ Installed 3 object(s) from 1 fixture(s)
 
 - **`MariaDBVectorField`**: Storing vector embeddings as a specialized field in Django models.
 - **`MariaDBVectorIndex`**: Creating HNSW (Hierarchical Navigable Small World) indexes for efficient similarity search.
-- **`RecommendationManager`**: Using a custom manager to perform `recommend()` queries based on vector similarity.
+- **`RecommendationManager`**: Using a custom manager to perform `similar_to()` queries based on vector similarity.
 
 ## Administration
 
