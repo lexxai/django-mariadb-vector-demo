@@ -1,5 +1,22 @@
 # Django MariaDB Vector Demo
 
+A minimal demo project showing how to build article recommendations using vector similarity in Django with MariaDB as the database.
+
+The app stores articles, embeds their content into vectors, and then finds similar articles based on vector distance.
+
+---
+
+## Features
+
+- Django application using MariaDB as the primary database
+- Article model with text content
+- Vector-based similarity search for recommendations
+- Simple UI:
+  - List of all articles
+  - “Similar articles” view for a selected article
+- Admin interface to add and manage articles
+
+
 This repository demonstrates the integration of MariaDB's vector capabilities with Django using the `django-mariadb-vector` library. 
 It showcases how to store vector embeddings, create vector indexes, and perform similarity searches within a Django application.
 
@@ -19,6 +36,13 @@ It showcases how to store vector embeddings, create vector indexes, and perform 
 
 ## Getting Started
 
+###  **Clone the repository**
+
+   ```bash
+   git clone https://github.com/lexxai/django-mariadb-vector-demo
+   cd django-mariadb-vector-demo
+   ```
+
 ### 1. Environment Setup
 
 Copy the example environment file and update it with your desired settings:
@@ -31,9 +55,7 @@ Review the `.env` file and adjust database credentials, superuser passwords, and
 
 ### 2. Run with Docker Compose
 
-Build and start the services:
-
-#### Build and run all services
+#### Build and start the services:
 ```bash
 docker compose up --build -d
 
@@ -143,4 +165,6 @@ To run the project locally without Docker:
     python src/manage.py runserver
     ```
 
+## Examples
 
+- [README.md](docs/README.md)
