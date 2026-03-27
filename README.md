@@ -143,8 +143,7 @@ Installed 3 object(s) from 1 fixture(s)
 
 Navigate to `http://localhost:8001/admin/
 - User is `admin`
-- password is from your `.env` file.
-- 
+- password is value from `DJANGO_SUPERUSER_PASSWORD` in your `.env` file.
 
 ## Development
 
@@ -172,4 +171,4 @@ To run the project locally without Docker:
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+- [MIT](https://choosealicense.com/licenses/mit/)
