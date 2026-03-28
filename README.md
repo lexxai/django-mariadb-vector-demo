@@ -13,11 +13,11 @@ The app stores articles, embeds their content into vectors, and then finds simil
 - Vector-based similarity search for recommendations
 - Simple UI:
   - List of all articles
-  - “Similar articles” view for a selected article
+  - "Similar articles" view for a selected article
 - Admin interface to add and manage articles
 
 
-This repository demonstrates the integration of MariaDB's vector capabilities with Django using the `django-mariadb-vector` library. 
+This repository demonstrates the integration of MariaDB's vector capabilities with Django using the [django-mariadb-vector](https://github.com/lexxai/django-mariadb-vector) library by simply usage `pip install django-mariadb-vector`. 
 It showcases how to store vector embeddings, create vector indexes, and perform similarity searches within a Django application.
 
 ## Prerequisites
@@ -168,6 +168,11 @@ To run the project locally without Docker:
 
 - [README.md](docs/README.md)
 
+## Reference
+- [Repository of 'django-mariadb-vector'](https://github.com/lexxai/django-mariadb-vector) 
+- [pip install django-mariadb-vector](https://pypi.org/project/django-mariadb-vector/)
+- [MariaDB vector-functions](https://mariadb.com/docs/server/reference/sql-functions/vector-functions)
+- [MariaDB vector-overview](https://mariadb.com/docs/server/reference/sql-structure/vectors/vector-overview)
 
 ## License
 
