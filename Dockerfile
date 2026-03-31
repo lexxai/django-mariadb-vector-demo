@@ -25,6 +25,7 @@ RUN groupadd ${_GROUP} && useradd --no-log-init -r --no-create-home -G ${_GROUP}
     procps \
     default-libmysqlclient-dev \
     default-mysql-client \
+    build-essential \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
